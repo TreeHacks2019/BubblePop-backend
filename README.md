@@ -1,55 +1,55 @@
-Programmable Voice: Quickstart Application Server - Python
-===
-This repository contains the server-side web application required to run the [Twilio Programmable Voice iOS SDK Quickstart](https://www.twilio.com/docs/api/voice-sdk/ios/getting-started) and [Android SDK Quickstart](https://www.twilio.com/docs/api/voice-sdk/android/getting-started) mobile sample apps.
+# BubblePop-backend
 
-Looking for the Quickstart mobile app?
+[![Devpost | BubblePop](https://badges.devpost-shields.com/get-badge?name=BubblePop&id=bubblepop&type=big-logo&style=flat)](https://devpost.com/software/bubblepop)
 
-Download the client-side Quickstart Applications in Swift and iOS here:
+![BubblePop Screenshots](https://www.stewartdulaney.com/wp-content/uploads/sites/7/2019/03/BubblePop.gif "BubblePop")
 
-- [Swift Quickstart Mobile App](https://github.com/twilio/voice-quickstart-swift)
-- [Objective-C Quickstart Mobile App](https://github.com/twilio/voice-quickstart-objc)
+## Inspiration
 
-Download the client-side Quickstart Application for Android here:
+They say we’re simply a reflection of the five closest people to us. It’s so easy to get comfortable in our own echo chambers, lost in opinions that seem so real because they’re all around us. But sometimes we can’t look at life as a bigger picture unless we take a step back and empathize with people we don’t normally talk about. 
 
-- [Android Quickstart Mobile App](https://github.com/twilio/voice-quickstart-android)
+7cups, a site where I volunteered to talk to anonymous strangers about their lives, helped me do that. BubblePop was inspired to do the same.
 
-## Prerequisites
+## What it does
 
-* A Twilio Account. Don't have one? [Sign up](https://www.twilio.com/try-twilio) for free!
-* Follow the [iOS full quickstart tutorial here](https://www.twilio.com/docs/api/voice-sdk/ios/getting-started) or [Android full quickstart tutorial here](https://www.twilio.com/docs/api/voice-sdk/android/getting-started).
+BubblePop presents you with a series of opinions. 
+Chocolate is life; Psychopaths are simply less socially inhibited; The US should implement a junk food tax. 
+Swipe up, down, left, or right - your choice. 
+Once done, you’re connected with your furthest neighbor - a stranger who answered the most differently from you. 
+Meet up and say hello! 
 
-## Setting up the Application
+On a more serious note, recently with the advent of social media oligarchies, fake news, and extremist groups, division of opinion has received a reputation as the enemy of societal progress. This shouldn't be the case, though.
 
-Open the file `server.py`. Edit `ACCOUNT_SID`, `API_KEY`, `API_KEY_SECRET` with the values gathered above in the Android or iOS quickstart.
+We create a place where people can anonymously proclaim their opinions on various articles regarding pressing issues. Then, we match people with differing opinions and encourage them to meet and discuss in a productive fashion. We hope to foster a diverse yet highly empathetic community.
 
-Next, install `pip` on your machine:
+## How I built it
 
-* [Python](https://www.python.org/) and `pip`
+- Firebase Realtime Database - Opinion bank storage, profile storage, and partner matching state storage- 
+- Twilio - Effortless peer to peer calling 
+- Code and iOS - main platform
 
-Once installed run the following command to install the required Python packages from within this project's parent directory:
+## Challenges I ran into
 
-    pip install -r requirements.txt
+First: Our team was quite unprepared for iOs since only one teammate had briefly worked with the platform and we only had two and a half Macs out of the four of us. Nevertheless, we learned iOs literally overnight and pulled through on the project. 
 
-Once that's done you can start the server by executing:
+Second: I wish I paid more attention in university math classes. For one of the first times in my life, I was required to think mathematically about a computer science problem. The goal was to transform the longitude and latitude coordinates of myself and my match, as well as my current compass direction, into a two-dimensional vector of how I should move to quickly reach my match. Unfortunately, after my teammate and I stressed for over six hours on this issue, reading mathematical formulas again and again while questioning whether we actually understood any of it, we finally settled on a semi-satisfactory compromise. In other words, we hacked it. 
 
-    python server.py
+## Accomplishments that I'm proud of
 
-Visit [http://localhost:5000](http://localhost:5000) to ensure the server is running.
+Half the things stated above. 
 
-### Up and running
+## What I learned
 
-This web application needs to be accessbile on the public internet in order to receive webhook requests from Twilio. [Ngrok](https://ngrok.com/) is a great options for getting this done quickly.
+How iOS works, how iOS doesn’t work, and how iOS sometimes works. 
 
-Once you have the application running locally, in a separate terminal window, make your server available to the public internet with the following:
+## Check it out
+- [https://devpost.com/software/bubblepop](https://devpost.com/software/bubblepop)
+- [https://github.com/TreeHacks2019/BubblePop-ios](https://github.com/TreeHacks2019/BubblePop-ios)
+- [https://github.com/TreeHacks2019/BubblePop-backend](https://github.com/TreeHacks2019/BubblePop-backend)
+- [https://github.com/TreeHacks2019/BubblePop-dashboard](https://github.com/TreeHacks2019/BubblePop-dashboard)
 
-    ngrok http 5000
-
-You should see a dynamically generated public Ngrok URL in the command window. Ngrok will now tunnel all HTTP traffic directed at this URL to your local machine at port 5000.
-
-### Test the app
-
-Test your app by opening the `{YOUR_SERVER_URL}/accessToken` endpoint in your browser. Use the publicly accessible domain on ngrok. You should see a long string. This is an Access Token. You can examine its contents by pasting it into a JWT tool like [jwt.io](http://jwt.io).
-
-## License
-
-MIT
+## Contributors
+- [jaxball](https://github.com/jaxball)
+- [jenniezheng](https://github.com/jenniezheng)
+- [sdulaney](https://github.com/sdulaney)
+- [willyjlee](https://github.com/willyjlee)
